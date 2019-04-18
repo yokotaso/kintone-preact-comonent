@@ -1,7 +1,8 @@
 import { configure } from '@storybook/preact';
 
+const req = require.context('../src/stories', true, /.*\.js$/);
 function loadStories() {
-  require('../stories/alert.js');
+  req.keys().forEach(filename => req(filename));
   // You can require as many stories as you need.
 }
 

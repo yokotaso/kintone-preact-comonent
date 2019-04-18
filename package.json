@@ -37,6 +37,7 @@
     "@babel/preset-typescript": "^7.3.3",
     "@cybozu/eslint-config": "^4.0.0",
     "@kintone/dts-gen": "^1.0.1",
+    "@storybook/addon-actions": "^5.0.10",
     "@storybook/addon-knobs": "^5.0.9",
     "@storybook/preact": "^5.0.9",
     "@types/node": "^11.13.4",
