@@ -17,8 +17,8 @@ function className(type: string): string {
 export function Alert(props: Props): JSX.Element {
   return (
     <div style={styled} className={className(props.type)}>
-      {props.text && props.text}
       {props.children && props.children}
+      {props.text && props.text}
     </div>
   );
 }

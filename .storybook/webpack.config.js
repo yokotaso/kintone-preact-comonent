@@ -9,11 +9,11 @@ module.exports = async ({ config, mode }) => {
 
   // Make whatever fine-grained changes you need
   config.module.rules.push({
-    test: /\.css$/,
-    loaders: ['css-loader'],
-    include: path.resolve(__dirname, '../'),
+      test: /\.tsx?$/,
+      loader: 'babel-loader',
+      exclude: /node_modules/
   });
-  config.module.rules.push({ test: /\.(ts|js)x?$/, loader: 'babel-loader', exclude: /node_modules/ })
+
   config.plugins.push(new ForkTsCheckerWebpackPlugin())
   config.devtool = 'source-map';
   // Return the altered config
