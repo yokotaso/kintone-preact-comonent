@@ -2,7 +2,7 @@
 import { h } from 'preact';
 import { storiesOf } from '@storybook/preact';
 import { withKnobs, text, boolean, radios} from '@storybook/addon-knobs';
-import { action, configureActions } from '@storybook/addon-actions';
+import { action } from '@storybook/addon-actions';
 
 import { Button } from '../components/Button.tsx';
 
@@ -11,7 +11,7 @@ const stories = storiesOf('Button', module)
     .addDecorator(withKnobs);
 
 stories
-  .add('with Attribute', () => (
+  .add('Button', () => (
       <Button
           type={radios('type', ['submit', 'anything'], 'submit')}
           text={text('text', 'Button')}
